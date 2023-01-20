@@ -1,0 +1,246 @@
+body {
+    width: 100%;
+    padding: 2.4rem;
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-attachment: fixed;
+
+    @include big_device {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../images/pattern-background-desktop.svg');
+    }
+
+    @include small_device {
+        background-image: url('../../images/pattern-background-mobile.svg');
+    }
+
+}
+
+.card {
+
+    max-width: 45rem;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+
+    @include small_device {
+        margin: 0 auto;
+    }
+
+    &__img {
+
+        border-radius: 2rem 2rem 0 0;
+
+        img {
+            @include img_responsive;
+            border-radius: 2rem 2rem 0 0;
+        }
+
+    }
+
+    &__bottom {
+
+        text-align: center;
+
+        @include big_device {
+            padding: 4.5rem 4.8rem 4.8rem;
+        }
+
+        @include small_device {
+            padding: 3.2rem 2.4rem;
+        }
+
+        &__title {
+
+            @include main_font_black;
+
+            color: $Darkblue;
+
+            @include big_device {
+                font-size: 2.8rem;
+                line-height: 3.7rem;
+            }
+
+            @include small_device {
+                font-size: 2.2rem;
+                line-height: 2.9rem;
+            }
+        }
+
+        &__p {
+
+            @include main_font_medium;
+            color: $Desaturatedblue;
+
+            @include big_device {
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+                margin-top: 1.7rem;
+            }
+
+            @include small_device {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                margin-top: 1.6rem;
+                padding: 0 .8rem;
+            }
+
+        }
+
+        &__info {
+
+            background-color: $Verypaleblue;
+            border-radius: 1.1rem;
+
+            display: flex;
+            align-items: center;
+
+            @include big_device {
+                margin-top: 2rem;
+                padding: 2.5rem 2.4rem;
+            }
+
+            @include small_device {
+                margin-top: 2.4rem;
+                padding: 1.6rem;
+            }
+
+            &__img {
+
+                width: 4.8rem;
+
+                img {
+                    @include img_responsive;
+                }
+
+            }
+
+            &__txt {
+
+                margin-left: 2rem;
+                text-align: left;
+
+                &__title {
+
+                    @include main_font_black;
+                    color: $Darkblue;
+
+                    @include big_device {
+                        font-size: 1.6rem;
+                        line-height: 2.1rem;
+                    }
+
+                    @include small_device {
+                        font-size: 1.4rem;
+                        line-height: 1.852rem;
+                    }
+
+
+                }
+
+                &__p {
+
+                    @include main_font_medium;
+
+                    color: $Desaturatedblue;
+
+                    @include big_device {
+                        font-size: 1.6rem;
+                        line-height: 2.1rem;
+                        margin-top: 0.6rem;
+                    }
+
+                    @include small_device {
+                        font-size: 1.4rem;
+                        line-height: 1.852rem;
+                        margin-top: 0.3rem;
+                    }
+                }
+
+            }
+
+            &__link {
+
+                @include main_font_bold;
+
+                color: $Brightblue;
+                text-decoration: underline;
+                margin-left: auto;
+
+                @include big_device {
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                }
+
+                @include small_device {
+                    font-size: 1.3rem;
+                    line-height: 1.72rem;
+                }
+
+                &:hover {
+                    color: #766CF1;
+                    text-decoration: none;
+                }
+
+            }
+
+        }
+
+        &__pay {
+
+            @include main_font_black;
+            height: 5rem;
+            line-height: 5rem;
+            font-size: 1.5rem;
+            background-color: $Brightblue;
+            color: white;
+            border-radius: 1.1rem;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            transition: all .3s;
+            border: 0;
+            padding: 0;
+            
+            box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+
+            @include big_device {
+                margin-top: 3.2rem;
+            }
+
+            @include small_device {
+                margin-top: 2.4rem;
+            }
+
+            &:hover {
+                background-color: #766CF1;
+            }
+
+        }
+
+        &__cancel {
+            @include main_font_black;
+            font-size: 1.5rem;
+            line-height: 1.985rem;
+            color: $Desaturatedblue;
+            display: block;
+
+            @include big_device {
+                margin-top: 3.2rem;
+            }
+
+            @include small_device {
+                margin-top: 2.4rem;
+            }
+
+            &:hover {
+                color: #1F2E55;
+            }
+        }
+
+    }
+
+}
